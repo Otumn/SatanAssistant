@@ -8,7 +8,7 @@ namespace GRP04.SatanAssistant
     public class Timer :  Entity
     {
         [SerializeField] private float maximumTime = 20f;
-        [SerializeField] private Text timer;
+        [SerializeField] private Slider timer;
         private bool shouldDecount = false;
         private float decountTime;
 
@@ -37,7 +37,7 @@ namespace GRP04.SatanAssistant
                     // game over
                 }
             }
-            timer.text = decountTime.ToString("F");
+            timer.value = Mathf.InverseLerp(0, maximumTime, decountTime);
         }
 
         public override void OnNeedsHidden()
