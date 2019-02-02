@@ -11,7 +11,7 @@ namespace GRP04.SatanAssistant
         public override void OnSoulJudgedRight()
         {
             base.OnSoulJudgedRight();
-            anim.SetTrigger("kick");
+            anim.SetTrigger("dance");
         }
     }
 }
