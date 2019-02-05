@@ -13,9 +13,6 @@ namespace GRP04.SatanAssistant
         [Header("Movement")]
         [SerializeField] private AnimationCurve forwardCurve;
         private Vector3 initialPos;
-        
-        [Header("Prototype")]
-        [SerializeField] private SpriteRenderer sprite;
 
         public override void OnSoulOrganised()
         {
@@ -26,19 +23,6 @@ namespace GRP04.SatanAssistant
 
         public void Randomize(ObjectReferences refs)
         {
-            int typeC = Random.Range(0, 3);
-            if(typeC == 0)
-            {
-                sprite.color = Color.red;
-            }
-            else if(typeC == 1)
-            {
-                sprite.color = Color.cyan;
-            }
-            else if(typeC == 2)
-            {
-                sprite.color = Color.yellow;
-            }
             // animator to change the look depending on typeC
             // choose all the objects between the ones possible
 
