@@ -7,7 +7,6 @@ namespace GRP04.SatanAssistant
     public class JudgedSoul : Entity
     {
         [SerializeField] private int[] selectedObjects;
-        [SerializeField] private Animator anim;
 
 
         [Header("Movement")]
@@ -15,12 +14,22 @@ namespace GRP04.SatanAssistant
         [SerializeField] private AnimationCurve ejectionCurve;
         [SerializeField] private float ejectionSpeed = 4f;
         [SerializeField] private float ejectionMaxDist = 5f;
+        [Header("Animations")]
+        [SerializeField] private Animator anim;
+        [SerializeField] private float minAnimSpeed = 0.8f;
+        [SerializeField] private float maxAnimSpeed = 1.2f;
 
         private bool judged = false;
         private bool isEjected = false;
         private float ejectionInc = 0;
         private Vector3 ejectionStart;
         private Vector3 initialPos;
+
+        protected override void Start()
+        {
+            base.Start();
+            anim.speed = Random.Range(minAnimSpeed, maxAnimSpeed);
+        }
 
         protected override void Update()
         {

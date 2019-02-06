@@ -7,7 +7,9 @@ namespace GRP04.SatanAssistant
 {
     public class UiManager : Entity
     {
+        [Header("Animations")]
         [SerializeField] private Animator rememberAnim;
+        [SerializeField] private Animator satanCanvasAnim;
         [Header("Needs")]
         [SerializeField] private Image[] needDisplays;
         [SerializeField] private Vector3 positionRef;
@@ -28,6 +30,7 @@ namespace GRP04.SatanAssistant
                 needDisplays[i].gameObject.SetActive(true);
                 needDisplays[i].rectTransform.localPosition = new Vector3(positionRef.x + (i * ((1f / needs) * 8)), positionRef.y, positionRef.z);
             }
+            satanCanvasAnim.SetTrigger("appear");
         }
 
         public void UIHideNeeds()
