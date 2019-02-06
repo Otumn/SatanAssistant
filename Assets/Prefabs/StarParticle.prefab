@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4166028321904108}
+  - component: {fileID: 114236081922243570}
   - component: {fileID: 198379170447677208}
   - component: {fileID: 199594890162902840}
   m_Layer: 0
@@ -41,6 +42,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114236081922243570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084966525137466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9159ba93969373b4987c3237ab2c631e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callback: 0
+  starParticle: {fileID: 198379170447677208}
+  particleCount: 8
 --- !u!198 &198379170447677208
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -53,7 +68,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

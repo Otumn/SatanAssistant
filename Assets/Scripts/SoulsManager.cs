@@ -61,6 +61,7 @@ namespace GRP04.SatanAssistant
                 if(judgedSouls[i].gameObject.activeSelf && !judgedSouls[i].Judged)
                 {
                     judgedSouls[i].InitialPos = judgedSouls[i].transform.localPosition;
+                    judgedSouls[i].Anim.SetBool("walk", true);
                 }
             }
         }
@@ -86,6 +87,7 @@ namespace GRP04.SatanAssistant
                         if (judgedSouls[i].gameObject.activeSelf && !judgedSouls[i].Judged)
                         {
                             judgedSouls[i].transform.localPosition = judgedSouls[i].InitialPos + new Vector3(1.5f, 0, 0);
+                            judgedSouls[i].Anim.SetBool("walk", false);
                         }
                     }
                     BringNewSoul();
@@ -96,6 +98,8 @@ namespace GRP04.SatanAssistant
         private void BringNewSoul()
         {
             GameManager.state.CallOnSoulEnter();
+            judgedSouls[GameManager.state.JudgedSoulIndex].Anim.SetBool("walk", false);
+            judgedSouls[GameManager.state.JudgedSoulIndex].Anim.SetBool("judged", true);
             int answers = Mathf.RoundToInt(answersDependingOnIndex.Evaluate(GameManager.state.JudgedSoulIndex));
             uiManager.UIShowNeeds(objectReferences, answers, judgedSouls[GameManager.state.JudgedSoulIndex]);
             answersGoal = answers;
@@ -121,7 +125,8 @@ namespace GRP04.SatanAssistant
                     if(answerIndex == answersGoal)
                     {
                         judgedSouls[GameManager.state.JudgedSoulIndex].Judged = true;
-                        judgedSouls[GameManager.state.JudgedSoulIndex].gameObject.SetActive(false);
+                        //judgedSouls[GameManager.state.JudgedSoulIndex].gameObject.SetActive(false);
+                        judgedSouls[GameManager.state.JudgedSoulIndex].Eject();
                         soulsJudged++;
                         if(soulsJudged == soulsGoal)
                         {

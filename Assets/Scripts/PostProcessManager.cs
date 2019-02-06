@@ -5,9 +5,9 @@ using UnityEngine.Rendering.PostProcessing;
 
 namespace GRP04.SatanAssistant
 {
+    public enum EntityCallback { None, OnSoulOrganised, OnSoulEnter, OnNeedsShown, OnNeedshidden, OnSoulJudgedRight, OnSoulJudgedWrong, OnMinigameWon }
     public class PostProcessManager : Entity
     {
-        public enum EntityCallback { None, OnSoulOrganised, OnSoulEnter, OnNeedsShown, OnNeedshidden, OnSoulJudgedRight, OnSoulJudgedWrong, OnMinigameWon}
         [SerializeField] private EntityCallback apparitionCallBack;
         [SerializeField] private PostProcessVolume volume;
         [SerializeField] private AnimationCurve apparitionCurve;
