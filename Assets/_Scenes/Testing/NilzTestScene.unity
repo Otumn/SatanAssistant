@@ -11171,7 +11171,7 @@ MonoBehaviour:
   - {fileID: 1190609240}
   - {fileID: 1468990073}
   - {fileID: 2079723295}
-  positionRef: {x: 0, y: 0, z: 0}
+  positionRef: {x: 4, y: 4.5, z: 0}
   buttons:
   - {fileID: 994056883}
   - {fileID: 544569145}
@@ -15998,7 +15998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 2
-  objectReferences: {fileID: 11400000, guid: 5021c5dd7e6ce27459e54728ce75e076, type: 2}
+  objectReferences: {fileID: 11400000, guid: 4368edf324f90644cacdc6cb921ffa2a, type: 2}
   uiManager: {fileID: 1882579943}
   judgedSouls:
   - {fileID: 1434941917}
