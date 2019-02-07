@@ -8,6 +8,20 @@ namespace GRP04.SatanAssistant
     public class ObjectReferences : ScriptableObject
     {
         [SerializeField] private Sprite[] objects;
+        [SerializeField] private TortureObject[] tortureObjects;
+
+        public TortureObject[] TortureObjects
+        {
+            get
+            {
+                return tortureObjects;
+            }
+
+            set
+            {
+                tortureObjects = value;
+            }
+        }
 
         public Sprite[] Objects
         {
@@ -15,10 +29,47 @@ namespace GRP04.SatanAssistant
             {
                 return objects;
             }
+        }
+    }
+
+    [System.Serializable]
+    public struct TortureObject
+    {
+        [SerializeField] private string name;
+        [SerializeField] private Sprite texture;
+        [SerializeField] private float zAngle;
+
+        public float ZAngle
+        {
+            get
+            {
+                return zAngle;
+            }
+        }
+
+        public Sprite Texture
+        {
+            get
+            {
+                return texture;
+            }
 
             set
             {
-                objects = value;
+                texture = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
             }
         }
     }

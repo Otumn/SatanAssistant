@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5648a109e21098e4085541a1260ba5e5, type: 3}
   - {fileID: 21300000, guid: 2d91f185ed80c6644bd1e88503619831, type: 3}
   - {fileID: 21300000, guid: b99424d16797ec941a4e9816aa4d5fc5, type: 3}
+  tortureObjects: []

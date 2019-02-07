@@ -52,7 +52,7 @@ namespace GRP04.SatanAssistant
             selectedObjects = new int[5];
             for (int i = 0; i < selectedObjects.Length; i++)
             {
-                selectedObjects[i] = Random.Range(0, refs.Objects.Length);
+                selectedObjects[i] = Random.Range(0, refs.TortureObjects.Length);
             }
 
             // randomize look and items

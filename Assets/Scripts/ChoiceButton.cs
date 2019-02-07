@@ -19,9 +19,10 @@ namespace GRP04.SatanAssistant
             GameManager.state.CallOnAnswerSent();
         }
 
-        public void UpdateImageSprite(Sprite sprite)
+        public void UpdateImageSprite(Sprite sprite, float zAngle)
         {
             image.sprite = sprite;
+            image.transform.rotation = Quaternion.Euler(0, 0, zAngle);
         }
 
         public override void OnSoulOrganised()

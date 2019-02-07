@@ -20,10 +20,6 @@ namespace GRP04.SatanAssistant
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            if(GUILayout.Button("Create souls"))
-            {
-
-            }
         }
     }
 }

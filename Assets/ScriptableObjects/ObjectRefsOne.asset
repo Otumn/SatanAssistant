@@ -24,3 +24,40 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c37791aed4b43cc42ac0d271aee8b3c6, type: 3}
   - {fileID: 21300000, guid: c57f5de8e64362845812c37a9c12253b, type: 3}
   - {fileID: 21300000, guid: 2b23c827e0157f94a8f3358abe7db5dc, type: 3}
+  tortureObjects:
+  - name: boulet
+    texture: {fileID: 21300000, guid: 1725c7b73821ad546aaf116a02dab073, type: 3}
+    zAngle: 0
+  - name: clou
+    texture: {fileID: 21300000, guid: ba4040039f9c69440bbb553e81bd7ed8, type: 3}
+    zAngle: 0
+  - name: croix
+    texture: {fileID: 21300000, guid: 97d1c0524225f2a4b923f7b8899d12ea, type: 3}
+    zAngle: 0
+  - name: epee
+    texture: {fileID: 21300000, guid: 1c0524ad1d9b4994b8d365614ab036c3, type: 3}
+    zAngle: 0
+  - name: faucille
+    texture: {fileID: 21300000, guid: 01398ce0862435945bc1244a31a5a9da, type: 3}
+    zAngle: 0
+  - name: fleche
+    texture: {fileID: 21300000, guid: 2a0f42732c180204e9c5555b98e43c8f, type: 3}
+    zAngle: 45
+  - name: hache
+    texture: {fileID: 21300000, guid: b1bed0c60908f4d4bb1ca947ca42aee8, type: 3}
+    zAngle: 90
+  - name: marteau
+    texture: {fileID: 21300000, guid: 8c58a9bd7af78fb428d11a592df4053e, type: 3}
+    zAngle: 0
+  - name: oeil_perce
+    texture: {fileID: 21300000, guid: 8e7263f32a94da349add135491a28bef, type: 3}
+    zAngle: 0
+  - name: rope
+    texture: {fileID: 21300000, guid: c37791aed4b43cc42ac0d271aee8b3c6, type: 3}
+    zAngle: 0
+  - name: roue
+    texture: {fileID: 21300000, guid: c57f5de8e64362845812c37a9c12253b, type: 3}
+    zAngle: 0
+  - name: scie
+    texture: {fileID: 21300000, guid: 2b23c827e0157f94a8f3358abe7db5dc, type: 3}
+    zAngle: -45
