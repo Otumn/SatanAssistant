@@ -10,12 +10,14 @@ namespace GRP04.SatanAssistant
         [SerializeField] private SoulsManager soulsManager;
         [SerializeField] private Image image;
         [SerializeField] private Animator buttonAnim;
+        [SerializeField] private ParticleSystem spikes;
         private int currentAnswer = 0;
 
         public void SendAnswerToManager()
         {
             soulsManager.SendAnswer(currentAnswer);
             buttonAnim.SetTrigger("buzz");
+            spikes.Emit(30);
             GameManager.state.CallOnAnswerSent();
         }
 

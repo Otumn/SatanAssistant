@@ -26,7 +26,7 @@ namespace GRP04.SatanAssistant
         protected override void Start()
         {
             base.Start();
-            OrganizeSouls(difficulty);
+            //OrganizeSouls(difficulty);
         }
 
         protected override void Update()
@@ -35,19 +35,25 @@ namespace GRP04.SatanAssistant
             SoulsMovement();
         }
 
-        private void OrganizeSouls(int difficulty)
+        public override void OnIntroFinished()
+        {
+            base.OnIntroFinished();
+            OrganizeSouls(difficulty);
+        }
+
+        private void OrganizeSouls(int d)
         {
             for (int i = 0; i < judgedSouls.Length; i++)
             {
                 judgedSouls[i].gameObject.SetActive(false);
             }
-            soulsGoal = Mathf.RoundToInt(difficultyCurve.Evaluate(difficulty));
+            soulsGoal = Mathf.RoundToInt(difficultyCurve.Evaluate(d));
             for (int i = 0; i < soulsGoal; i++)
             {
                 judgedSouls[i].gameObject.SetActive(true);
                 judgedSouls[i].Randomize(objectReferences);
             }
-            GameManager.state.GoalSoulNumber = Mathf.RoundToInt(difficultyCurve.Evaluate(difficulty));
+            GameManager.state.GoalSoulNumber = Mathf.RoundToInt(difficultyCurve.Evaluate(d));
             GameManager.state.CallOnSoulOrganized();
             MoveRemainingSoulsForward();
         }

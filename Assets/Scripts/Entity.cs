@@ -33,6 +33,11 @@ namespace GRP04.SatanAssistant
 
         #region Entity CallBacks
 
+        public virtual void OnIntroFinished()
+        {
+
+        }
+
         public virtual void OnSoulOrganised()
         {
 
